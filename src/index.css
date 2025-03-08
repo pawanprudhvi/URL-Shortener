@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap');
+
+.roboto-body {
+  font-family: "Roboto", sans-serif;
+}
+
+.montserrat-heading {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  background-color: beige;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.input-section, .output-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; 
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+
+.input-field {
+  width: 70%; 
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn {
+  width: 30%;
+  padding: 12px;
+  background: grey;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.statusMessage {
+  font-size: 14px;
+  color: tomato;
+  margin-top: 10px;
+}
+
+.copiedMessage {
+  font-size: 14px;
+  color: green;
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .input-field, .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btn {
+    width: 30%;
+  }
+}

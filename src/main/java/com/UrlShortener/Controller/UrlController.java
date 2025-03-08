@@ -6,10 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 import static org.springframework.http.HttpStatus.OK;
 
 @RestController
+@CrossOrigin(origins = "${front-end-url}")
 public class UrlController {
     @Autowired
     UrlService urlservice;
@@ -22,8 +24,11 @@ public class UrlController {
         }
 
     @GetMapping("/{shortUrl}")
-    public ResponseEntity<String> getLongUrl(@PathVariable String shortUrl)
+    public RedirectView getLongUrl(@PathVariable String shortUrl)
     {
-        return new ResponseEntity<>(urlservice.getLongUrl(shortUrl), HttpStatus.OK);
+        String longUrl = urlservice.getLongUrl(shortUrl);
+        RedirectView redirectView = new RedirectView();
+        redirectView.setUrl(longUrl);
+        return redirectView;
     }
 }
